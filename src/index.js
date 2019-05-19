@@ -10,28 +10,28 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 
 
-const feelingReducer = (state = [], action) => {
+const feelingReducer = (state = '', action) => {
     if (action.type === 'FEELING') {
         return action.payload;
     } 
     return state;
 }
 
-const understandingReducer = (state = [], action) => {
+const understandingReducer = (state = '', action) => {
     if (action.type === 'UNDERSTANDING') {
         return action.payload;
     } 
     return state;
 }
 
-const supportReducer = (state = [], action) => {
+const supportReducer = (state = '', action) => {
     if (action.type === 'SUPPORT') {
         return action.payload;
     } 
     return state;
 }
 
-const commentsReducer = (state = [], action) => {
+const commentsReducer = (state = '', action) => {
     if (action.type === 'COMMENTS') {
         return action.payload;
     } 
@@ -44,6 +44,9 @@ const commentsReducer = (state = [], action) => {
 const storeInstance = createStore(
     combineReducers({
         feelingReducer,
+        understandingReducer,
+        supportReducer,
+        commentsReducer
     }),
     applyMiddleware(logger)
 );

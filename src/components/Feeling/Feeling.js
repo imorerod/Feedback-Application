@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import mapReduxStateToProps from '../../modules/mapReduxStateToProps';
+import Review from '../Review/Review';
 
 class Feeling extends Component {
     constructor(props) {
@@ -38,6 +39,7 @@ class Feeling extends Component {
                     onChange={this.changeRating}
                 />
                 <button onClick={this.clickAddFeeling}>Next</button>
+                <Review />
             </div>
         );
     }

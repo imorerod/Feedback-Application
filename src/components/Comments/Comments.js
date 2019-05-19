@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import mapReduxStateToProps from '../../modules/mapReduxStateToProps';
+import Review from '../Review/Review';
 
 class Comments extends Component {
     constructor(props) {
@@ -40,6 +41,7 @@ class Comments extends Component {
                     onChange={this.changeComment}
                 />
                 <button onClick={this.clickAddComment}>Next</button>
+            <Review />
             </div>
         );
     }

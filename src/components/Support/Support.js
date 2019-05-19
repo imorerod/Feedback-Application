@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import mapReduxStateToProps from '../../modules/mapReduxStateToProps';
+import Review from '../Review/Review';
 
 class Support extends Component {
     constructor(props) {
@@ -39,6 +40,7 @@ class Support extends Component {
                     onChange={this.supportRating}
                 />
                 <button onClick={this.clickAddSupport}>Next</button>
+            <Review />
             </div>
         );
     }
