@@ -16,11 +16,12 @@ class Review extends Component {
         postFeedback(this.props.reduxState.feelingReducer,
             this.props.reduxState.understandingReducer,
             this.props.reduxState.supportReducer,
-            this.props.reduxState.commentsReducer)
+            this.props.reduxState.commentsReducer,
+            this.props.reduxState.reviewReducer)
             .then((response) => {
                 this.props.dispatch({
                     type: 'REVIEW',
-                    payload: this.state.clear
+                    payload: this.state.review
                 })
                 this.props.history.push('/confirmation');
             })
