@@ -5,7 +5,7 @@ import mapReduxStateToProps from '../../modules/mapReduxStateToProps'
 class Confirmation extends Component {
 
     startOver = (event) =>{
-        this.props.history.push('/feeling')
+        this.props.history.push('/')
     }
 
     render(){
