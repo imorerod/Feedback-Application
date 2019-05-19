@@ -12,12 +12,14 @@ class Review extends Component {
         }
     }
 
-
     addReviewToDatabase = (event) => {
-        postFeedback(this.props.reduxState.feedbackReducer)
+        postFeedback(this.props.reduxState.feelingReducer,
+            this.props.reduxState.understandingReducer,
+            this.props.reduxState.supportReducer,
+            this.props.reduxState.commentsReducer)
             .then((response) => {
                 this.props.dispatch({
-                    type: 'CLEAR_REDUX',
+                    type: 'REVIEW',
                     payload: this.state.clear
                 })
                 this.props.history.push('/confirmation');

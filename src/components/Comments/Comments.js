@@ -25,10 +25,6 @@ class Comments extends Component {
             type: 'COMMENT',
             payload: this.state.comment
         });
-        console.log('COMMENTS working');
-        console.log(this.state.comment);
-        // navigate to list
-        this.props.history.push('/confirmation');
 }
 
 

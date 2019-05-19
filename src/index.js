@@ -32,14 +32,14 @@ const supportReducer = (state = '', action) => {
 }
 
 const commentsReducer = (state = '', action) => {
-    if (action.type === 'COMMENTS') {
+    if (action.type === 'COMMENT') {
         return action.payload;
     } 
     return state;
 }
 
 const reviewReducer = (state = '', action) => {
-    if (action.type === 'CLEAR_REDUX') {
+    if (action.type === 'REVIEW') {
         return action.payload;
     } 
     return state;
