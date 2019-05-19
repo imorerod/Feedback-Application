@@ -7,6 +7,11 @@ const getFeedback = () => {
         })
     }
 
+const postFeedback = (feedbackObject) => {
+    return axios.post('/feedback', feedbackObject);
+}
+
 export {
-    getFeedback
+    getFeedback,
+    postFeedback
 }

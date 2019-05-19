@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './App.css';
 import { connect } from 'react-redux';
 import mapReduxStateToProps from '../../modules/mapReduxStateToProps';
-import { HashRouter as Router, Route, Link } from "react-router-dom";
-import getFeedback from '../../modules/services/feedback.service';
+import { HashRouter as Router, Route } from "react-router-dom";
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import Confirmation from '../Confirmation/Confirmation';
 
 class App extends Component {
   render() {
@@ -20,13 +19,11 @@ class App extends Component {
         </header>
       <div className="routerDiv">
       <Router>
-      <Route path="/feeling" component={Feeling} />
-      <Route path="/understanding" component={Understanding} />
-      <Route path="/support" component={Support} />
-      <Route path="/comments" component={Comments} />
-
-
-
+        <Route path="/feeling" component={Feeling} />
+        <Route path="/understanding" component={Understanding} />
+        <Route path="/support" component={Support} />
+        <Route path="/comments" component={Comments} />
+        <Route path="/confirmation" component={Confirmation} />
       </Router>
       </div>
       </div>

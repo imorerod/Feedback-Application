@@ -38,6 +38,12 @@ const commentsReducer = (state = '', action) => {
     return state;
 }
 
+const reviewReducer = (state = '', action) => {
+    if (action.type === 'CLEAR_REDUX') {
+        return action.payload;
+    } 
+    return state;
+}
 
 
 
@@ -46,7 +52,8 @@ const storeInstance = createStore(
         feelingReducer,
         understandingReducer,
         supportReducer,
-        commentsReducer
+        commentsReducer,
+        reviewReducer
     }),
     applyMiddleware(logger)
 );
