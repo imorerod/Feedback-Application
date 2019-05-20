@@ -27,9 +27,9 @@ router.post('/', (req, res) => {
 
 
     pool.query(queryString, [
-        surveyObject.feedback,
-        surveyObject.understanding,
-        surveyObject.support,
+        parseInt(surveyObject.feeling),
+        parseInt(surveyObject.understanding),
+        parseInt(surveyObject.support),
         surveyObject.comments
         ])
         .then((response) => {

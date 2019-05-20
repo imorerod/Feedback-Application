@@ -13,11 +13,15 @@ class Review extends Component {
     }
 
     addReviewToDatabase = (event) => {
-        postFeedback(this.props.reduxState.feelingReducer,
-            this.props.reduxState.understandingReducer,
-            this.props.reduxState.supportReducer,
-            this.props.reduxState.commentsReducer,
-            this.props.reduxState.reviewReducer)
+
+        const surveyObject = {
+            feeling : this.props.reduxState.feelingReducer,
+            understanding : this.props.reduxState.understandingReducer,
+            support : this.props.reduxState.supportReducer,
+            comments : this.props.reduxState.commentsReducer,
+        }
+
+        postFeedback(surveyObject)
             .then((response) => {
                 this.props.dispatch({
                     type: 'REVIEW',
@@ -26,7 +30,7 @@ class Review extends Component {
                 this.props.history.push('/confirmation');
             })
     }
-
+    
     render() {
         let disableButton = true;
 
